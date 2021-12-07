@@ -1,17 +1,17 @@
 import React from "react";
-import Home from "./Home";
+import { Link, Outlet } from "react-router-dom";
+
+
 
 const App = () => {
     return (
         <div>
           <nav>
-            <a href="/">Go to Home Page</a>
-            <a href="/procedures">See Our Procedures</a>
-            <a href="/contact">Contact Us!</a>
+            <Link to="/">Go to Home Page</Link> | {" "}
+            <Link to="/procedures">See Our Procedures</Link> | {" "}
+            <Link to="/contact">Contact Us!</Link> {" "}
           </nav>
-          <div>
-            <Home />
-          </div>
+          <Outlet />
         </div>
     );
 }
